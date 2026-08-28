@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Career Recommendation</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Header -->
+        <header class="hero">
+
+            <h1>AI Career Recommendation</h1>
+
+            <p>
+                Discover a career that matches your skills, interests and strengths.
+            </p>
+
+        </header>
+
+
+        <!-- Form -->
+        <main>
+
+            <section class="card">
+
+                <div class="section-heading">
+                    <p class="small-title">CAREER ASSESSMENT</p>
+
+                    <h2>Rate your skills and interests</h2>
+
+                    <p class="instruction">
+                        Move each slider from 1 (Low) to 5 (High).
+                    </p>
+                </div>
+
+
+                <form id="careerForm">
+
+                    <div class="input-grid">
+
+                        <!-- Programming -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="programming">Programming</label>
+                                <span id="programmingValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="programming"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Problem Solving -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="problemSolving">Problem Solving</label>
+                                <span id="problemSolvingValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="problemSolving"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Analytical Thinking -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="analyticalThinking">Analytical Thinking</label>
+                                <span id="analyticalThinkingValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="analyticalThinking"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Mathematics -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="mathematics">Mathematics</label>
+                                <span id="mathematicsValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="mathematics"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Creativity -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="creativity">Creativity</label>
+                                <span id="creativityValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="creativity"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Communication -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="communication">Communication</label>
+                                <span id="communicationValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="communication"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Design Interest -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="designInterest">Design Interest</label>
+                                <span id="designInterestValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="designInterest"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Technical Interest -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="technicalInterest">Technical Interest</label>
+                                <span id="technicalInterestValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="technicalInterest"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Teamwork -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="teamwork">Teamwork</label>
+                                <span id="teamworkValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="teamwork"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+
+                        <!-- Attention to Detail -->
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="attentionToDetail">
+                                    Attention to Detail
+                                </label>
+
+                                <span id="attentionToDetailValue">3</span>
+                            </div>
+
+                            <input type="range"
+                                   id="attentionToDetail"
+                                   min="1"
+                                   max="5"
+                                   value="3">
+                        </div>
+
+                    </div>
+
+
+                    <div class="scale-note">
+                        <span>1 — Low</span>
+                        <span>5 — High</span>
+                    </div>
+
+
+                    <button type="submit" class="predict-btn">
+                        Get Career Recommendation
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- Result will appear here -->
+            <section id="result" class="result-section"></section>
+
+        </main>
+
+
+        <footer>
+            <p>AI Career Recommendation • Built with Python, Flask & Machine Learning</p>
+        </footer>
+
+    </div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
